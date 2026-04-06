@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+:root {
+  --cream:       #faf7f0;
+  --cream-card:  #ffffff;
+  --navy:        #1b304f;
+  --navy-dim:    #243d5e;
+  --gold:        #b5811f;
+  --gold-muted:  rgba(181, 129, 31, 0.18);
+  --border:      #e6ddd0;
+  --border-soft: #ede7db;
+  --muted:       #8c7d6c;
+  --text:        #251d12;
+  --text-body:   #3d3224;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-body), "DM Sans", system-ui, sans-serif;
+  color: var(--text);
+  background-color: var(--cream);
+  /* subtle paper grain */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Display / serif utility */
+.font-display {
+  font-family: var(--font-display), "Cormorant Garamond", Georgia, serif;
+}
+
+/* Gold rule decoration */
+.gold-rule {
+  height: 1px;
+  background: linear-gradient(90deg, var(--gold) 0%, transparent 80%);
+  opacity: 0.6;
+}
+
+/* Card with warm shadow */
+.card {
+  background: var(--cream-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(37, 29, 18, 0.06), 0 4px 16px rgba(37, 29, 18, 0.04);
+}
