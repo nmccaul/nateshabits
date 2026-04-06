@@ -126,7 +126,7 @@ export default function PDFPane({
       // Find the matching highlight to get current color + text
       const rect = (mark as HTMLElement).getBoundingClientRect();
       // Dispatch a custom event carrying the id so the React state handler can look it up
-      el.dispatchEvent(new CustomEvent("hl-click", { detail: { id, rect }, bubbles: false }));
+      containerRef.current?.dispatchEvent(new CustomEvent("hl-click", { detail: { id, rect }, bubbles: false }));
       e.stopPropagation();
     }
     el.addEventListener("click", handleClick);
